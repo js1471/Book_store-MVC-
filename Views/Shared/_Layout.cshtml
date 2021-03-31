@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Book_store_MVC_</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel='stylesheet' href='~/assets/css/bootstrap.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='~/assets/css/animate.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='~/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%2C800%7CMontserrat%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CDosis%3A400%2C700&#038;ver=4.5' type='text/css' media='all' />
+    <link rel='stylesheet' href='~/icons/elegantline/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='~/assets/css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='~/assets/css/flexslider.css' type='text/css' media='all' />
+</head>
+<body class="frontpage">
+    <div class="page-loader">
+        <img src="assets/img/loader.gif" alt="loader">
+    </div>
+    <header id="header">
+        <div id="mega-menu" class="header header2 header-sticky primary-menu icons-no default-skin zoomIn align-right">
+            <nav class="navbar navbar-default redq">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                            <img src="~/assets/img/mylogo.jpg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <a class="mobile-menu-close"><i class="fa fa-close"></i></a>
+                        <div class="menu-top-menu-container">
+                            <ul id="menu-top-menu" class="nav navbar-nav nav-list">
+                                <li><a asp-controller="Books" asp-action="Index">Books</a></li>
+                                <li><a asp-controller="Authors" asp-action="Index">Authors</a></li>
+                                <li><a asp-controller="Publications" asp-action="Index">Publication</a></li>
+                                <li><a asp-controller="Publishers" asp-action="Index">Publishers</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+                    <partial name="_LoginPartial" />
+                </div>
+                <!-- /.container -->
+            </nav>
+        </div>
+    </header>
+
+    <div>
+
+        @RenderBody()
+
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - Book_store_MVC_ - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/assets/js/jquery.js"></script>
+    <script src="~/assets/js/plugins.js"></script>
+    <script src="~/contact/topvalidate.js"></script>
+    <script src="~/contact/bottomvalidate.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

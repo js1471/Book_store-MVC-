@@ -1,0 +1,56 @@
+﻿@model Book_store_MVC_.Models.Author
+
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+
+    .padding1
+    {
+       padding-top:15em;
+    }
+
+</style>
+<div class="padding1"></div>
+<h1 class="">Create</h1>
+
+<h4>Author</h4>
+<hr />
+<div  class="row">
+    <div class="col-md-8">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email_Id" class="control-label"></label>
+                <input asp-for="Email_Id" class="form-control" />
+                <span asp-validation-for="Email_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mobile_Number" class="control-label"></label>
+                <input asp-for="Mobile_Number" class="form-control" />
+                <span asp-validation-for="Mobile_Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
